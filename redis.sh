@@ -1,22 +1,18 @@
-#!/bin/bash
-
-# contact me @ahmedyad200
-
 echo -e "\n\nThis Script is written by: AHMED @ahmedyad200\n\n"
 
 sleep 4
 
-apt-get update
+apt-get update-y
 
-apt-get upgrade
+apt-get upgrade-y
 
 echo -e "\n\ninstalling redis-server ......\n\n"
 
-apt install redis-server
+apt install redis-server-y
 
 echo -e "\n\nTurning off redis-server ......\n\n"
 
-service redis stop
+service redis stop-y
 
 read -p "Enter the old server-ip-address -> " ip
 
@@ -26,7 +22,7 @@ sudo scp root@$ip:/var/lib/redis/dump.rdb /var/lib/redis/dump.rdb
 
 echo -e "\n\nRestarting redis-server ......\n\n"
 
-service redis start
+service redis start-y
 
 echo -e "\n\nDone Installing New Redis DB"
 
