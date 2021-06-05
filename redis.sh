@@ -36,4 +36,4 @@ sleep 5
 
 redis-cli keys "*"
 
-io.write("\27[31;47m\n◼¦ Script By: AHMEDYAD *@ahmedyad200 ¦◼\27[0;34;49m\n")  
+echo -e "\27[31;47m\n◼¦ Script By: AHMEDYAD *@ahmedyad200 ¦◼\27[0;34;49m\n" 
