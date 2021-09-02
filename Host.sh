@@ -35,3 +35,7 @@ apt update
 apt upgrade
 cd /etc/php/7.4/apache2
 rm -fr php.ini
+wget https://raw.githubusercontent.com/ahmedyad200/YYYBD/master/php.ini
+cd
+cd /etc/apache2
+rm -fr apache2.conf
