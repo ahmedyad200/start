@@ -1,8 +1,10 @@
+echo -e "\n\nThis Script is written by: AHMED @ahmedyad200\n\n"
 cd 
 sudo apt install apache2
 sudo systemctl enable apache2
 sudo systemctl start apache2
 sudo systemctl stop apache2
+echo -e "\n\nInstalld apache2\n\n"
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
@@ -12,6 +14,7 @@ sudo apt install php-cli unzip
 sudo apt install php-mbstring
 apt install composer
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+echo -e "\n\nsetup php host\n\n"
 composer
 cd ~
 mkdir slugify
@@ -42,3 +45,5 @@ rm -fr apache2.conf
 wget https://raw.githubusercontent.com/ahmedyad200/YYYBD/master/apache2.conf
 cd
 sudo systemctl restart apache2
+echo -e "\n\nتم تنصيب الاستضافه علي السيرفر\n\n"
+echo -e "\n\nThis Script is written by: AHMED @ahmedyad200\n\n"
