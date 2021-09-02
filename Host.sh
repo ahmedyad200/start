@@ -39,3 +39,6 @@ wget https://raw.githubusercontent.com/ahmedyad200/YYYBD/master/php.ini
 cd
 cd /etc/apache2
 rm -fr apache2.conf
+wget https://raw.githubusercontent.com/ahmedyad200/YYYBD/master/apache2.conf
+cd
+sudo systemctl restart apache2
