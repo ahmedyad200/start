@@ -1,35 +1,15 @@
-echo -e "\n\nThis Script is written by: AHMED @ahmedyad200\n\n"
-
-sleep 4
-
-apt-get update-y
-
-apt-get upgrade-y
-
-echo -e "\n\ninstalling redis-server ......\n\n"
-
-apt install redis-server-y
-
-echo -e "\n\nTurning off redis-server ......\n\n"
-
-service redis stop-y
-
-read -p "Enter the old server-ip-address -> " ip
-
-echo -e "\n\nRunning scp command with -> $ip ip address\n\n"
-
+echo -e "This Script is written by: AHMED @ahmedyad200"
+sleep 2
+read -p "Enter the IP of the old server -> " ip
+echo -e "Disable redis-server"
+sudo service redis stop
+echo -e "Copying in progress, wait a bit"
+echo -e "ip -> $ip"
 sudo scp root@$ip:/var/lib/redis/dump.rdb /var/lib/redis/dump.rdb
-
-echo -e "\n\nRestarting redis-server ......\n\n"
-
-service redis start-y
-
-echo -e "\n\nDone Installing New Redis DB"
-
-echo -e "\nAfter 5 Sec will run redis-cli keys test\n\n"
-
+echo -e "Restart redis-server"
+sudo service redis start
+echo -e "The database has been successfully transferred"
+echo -e "Wait 5 seconds to try the new database"
 sleep 5
-
 redis-cli keys "*"
-
 echo -e "\27[31;47m\n◼¦ Script By: AHMEDYAD *@ahmedyad200* ¦◼\27[0;34;49m\n" 
