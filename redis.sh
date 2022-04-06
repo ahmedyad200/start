@@ -1,6 +1,6 @@
 echo -e "This Script is written by: AHMED @ahmedyad200"
 sleep 2
-read -p "Enter the IP of the old server -> " ip
+read -p "Enter the IP of the old server: " ip
 echo -e "Disable redis-server"
 sudo service redis stop
 echo -e "Copying in progress, wait a bit"
